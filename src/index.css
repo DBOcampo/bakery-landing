@@ -1,0 +1,37 @@
+@import url("https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,700;9..144,800&family=Inter:wght@400;500;600;700&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-cream font-body text-cocoa antialiased;
+  }
+
+  ::selection {
+    @apply bg-golden text-cocoa;
+  }
+}
+
+@layer components {
+  .section-shell {
+    @apply mx-auto w-full max-w-6xl px-5 sm:px-8;
+  }
+
+  .display-title {
+    @apply font-display text-4xl font-extrabold leading-[0.98] tracking-normal text-cherry sm:text-5xl lg:text-6xl;
+  }
+
+  .primary-button {
+    @apply inline-flex min-h-12 items-center justify-center rounded-full bg-cherry px-6 text-sm font-bold text-white shadow-soft transition hover:bg-berry focus:outline-none focus:ring-4 focus:ring-cherry/20;
+  }
+
+  .secondary-button {
+    @apply inline-flex min-h-12 items-center justify-center rounded-full border border-cherry/20 bg-white/60 px-6 text-sm font-bold text-cherry transition hover:border-cherry/40 hover:bg-white focus:outline-none focus:ring-4 focus:ring-cherry/15;
+  }
+}
